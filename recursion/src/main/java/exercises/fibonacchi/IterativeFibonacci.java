@@ -5,6 +5,15 @@ public class IterativeFibonacci implements FibonacciStrategy {
     @Override
     public long compute(int n) {
         //TODO implement using iterative approach
+        // Use two accumulators (a,b) and a for-loop to n
+        long a = 0;
+        long b = 1;
+        for(int i = 0; i <= n; i++){
+            long c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
     }
 
 
